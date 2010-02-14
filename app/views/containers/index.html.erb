@@ -1,0 +1,26 @@
+<h1>Listing containers</h1>
+
+<table>
+  <tr>
+    <th>Label</th>
+    <th>Mediatype</th>
+    <th>Containertype</th>
+    <th>Comment</th>
+  </tr>
+
+<% @containers.each do |container| %>
+  <tr>
+    <td><%=h container.label %></td>
+    <td><%=h container.mediatype_id %></td>
+    <td><%=h container.containertype_id %></td>
+    <td><%=h container.comment %></td>
+    <td><%= link_to 'Show', container %></td>
+    <td><%= link_to 'Edit', edit_container_path(container) %></td>
+    <td><%= link_to 'Destroy', container, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New container', new_container_path %>

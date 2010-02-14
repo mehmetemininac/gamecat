@@ -1,0 +1,23 @@
+<p>
+  <b>Label:</b>
+  <%=h @container.label %>
+</p>
+
+<p>
+  <b>Mediatype:</b>
+  <%=h @container.mediatype_id %>
+</p>
+
+<p>
+  <b>Containertype:</b>
+  <%=h @container.containertype_id %>
+</p>
+
+<p>
+  <b>Comment:</b>
+  <%=h @container.comment %>
+</p>
+
+
+<%= link_to 'Edit', edit_container_path(@container) %> |
+<%= link_to 'Back', containers_path %>

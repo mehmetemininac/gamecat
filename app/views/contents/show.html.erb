@@ -1,0 +1,28 @@
+<p>
+  <b>Title:</b>
+  <%=h @content.title %>
+</p>
+
+<p>
+  <b>Gametype:</b>
+  <%=h @content.gametype_id %>
+</p>
+
+<p>
+  <b>Content data:</b>
+  <%=h @content.content_data %>
+</p>
+
+<p>
+  <b>Contenttype:</b>
+  <%=h @content.contenttype_id %>
+</p>
+
+<p>
+  <b>Comment:</b>
+  <%=h @content.comment %>
+</p>
+
+
+<%= link_to 'Edit', edit_content_path(@content) %> |
+<%= link_to 'Back', contents_path %>

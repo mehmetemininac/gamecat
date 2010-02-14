@@ -1,0 +1,18 @@
+<p>
+  <b>Name:</b>
+  <%=h @mediatype.name %>
+</p>
+
+<p>
+  <b>Shortname:</b>
+  <%=h @mediatype.shortname %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%=h @mediatype.description %>
+</p>
+
+
+<%= link_to 'Edit', edit_mediatype_path(@mediatype) %> |
+<%= link_to 'Back', mediatypes_path %>

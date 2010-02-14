@@ -1,0 +1,28 @@
+<h1>Editing container</h1>
+
+<% form_for(@container) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :label %><br />
+    <%= f.text_field :label %>
+  </p>
+  <p>
+    <%= f.label :mediatype_id %><br />
+    <%= f.text_field :mediatype_id %>
+  </p>
+  <p>
+    <%= f.label :containertype_id %><br />
+    <%= f.text_field :containertype_id %>
+  </p>
+  <p>
+    <%= f.label :comment %><br />
+    <%= f.text_area :comment %>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @container %> |
+<%= link_to 'Back', containers_path %>

@@ -1,4 +1,14 @@
 ActionController::Routing::Routes.draw do |map|
+  map.resources :contents
+
+  map.resources :containers
+
+  map.resources :mediatypes
+
+  map.resources :gamecategories
+
+  map.resources :contenttypes
+
   # The priority is based upon order of creation: first created -> highest priority.
 
   # Sample of regular route:
