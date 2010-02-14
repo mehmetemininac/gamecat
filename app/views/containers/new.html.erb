@@ -1,5 +1,7 @@
 <h1>New container</h1>
 
+<p>Container # <%= Container.all.empty? ? '1' : Container.last.id + 1 %>
+
 <% form_for(@container) do |f| %>
   <%= f.error_messages %>
 
@@ -9,11 +11,11 @@
   </p>
   <p>
     <%= f.label :mediatype_id %><br />
-    <%= f.text_field :mediatype_id %>
+    <%= collection_select @container, :mediatype_id, Mediatype.all, :id, :shortname %>
   </p>
   <p>
     <%= f.label :containertype_id %><br />
-    <%= f.text_field :containertype_id %>
+    <%= collection_select @container, :containertype_id, Containertype.all, :id, :shortname %>
   </p>
   <p>
     <%= f.label :comment %><br />

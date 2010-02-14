@@ -9,13 +9,23 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 6) do
+ActiveRecord::Schema.define(:version => 8) do
 
   create_table "containers", :force => true do |t|
     t.string   "label"
     t.integer  "mediatype_id"
     t.integer  "containertype_id"
     t.text     "comment"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.boolean  "given"
+    t.string   "gave_to"
+    t.datetime "given_on"
+  end
+
+  create_table "containertypes", :force => true do |t|
+    t.string   "name"
+    t.string   "shortname"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

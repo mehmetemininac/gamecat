@@ -1,0 +1,22 @@
+<h1>Listing containertypes</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Shortname</th>
+  </tr>
+
+<% @containertypes.each do |containertype| %>
+  <tr>
+    <td><%=h containertype.name %></td>
+    <td><%=h containertype.shortname %></td>
+    <td><%= link_to 'Show', containertype %></td>
+    <td><%= link_to 'Edit', edit_containertype_path(containertype) %></td>
+    <td><%= link_to 'Destroy', containertype, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New containertype', new_containertype_path %>

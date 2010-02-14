@@ -1,0 +1,20 @@
+<h1>Editing containertype</h1>
+
+<% form_for(@containertype) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <%= f.label :shortname %><br />
+    <%= f.text_field :shortname %>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @containertype %> |
+<%= link_to 'Back', containertypes_path %>
