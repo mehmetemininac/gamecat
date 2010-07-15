@@ -1,26 +1,19 @@
-<h1>Listing containers</h1>
+<% title "Containers" %>
 
 <table>
   <tr>
-    <th>Label</th>
-    <th>Mediatype</th>
-    <th>Containertype</th>
-    <th>Comment</th>
+    <th>Name</th>
+    <th>Description</th>
   </tr>
-
-<% @containers.each do |container| %>
-  <tr>
-    <td><%=h container.label %></td>
-    <td><%=h container.mediatype_id %></td>
-    <td><%=h container.containertype_id %></td>
-    <td><%=h container.comment %></td>
-    <td><%= link_to 'Show', container %></td>
-    <td><%= link_to 'Edit', edit_container_path(container) %></td>
-    <td><%= link_to 'Destroy', container, :confirm => 'Are you sure?', :method => :delete %></td>
-  </tr>
-<% end %>
+  <% for container in @containers %>
+    <tr>
+      <td><%=h container.name %></td>
+      <td><%=h container.description %></td>
+      <td><%= link_to "Show", container %></td>
+      <td><%= link_to "Edit", edit_container_path(container) %></td>
+      <td><%= link_to "Destroy", container, :confirm => 'Are you sure?', :method => :delete %></td>
+    </tr>
+  <% end %>
 </table>
 
-<br />
-
-<%= link_to 'New container', new_container_path %>
+<p><%= link_to "New Container", new_container_path %></p>

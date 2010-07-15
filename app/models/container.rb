@@ -1,3 +1,3 @@
 class Container < ActiveRecord::Base
-  has_many :contents
+  attr_accessible :name, :description
 end

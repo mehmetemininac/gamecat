@@ -1,25 +1,16 @@
-<p>Container # <%= @container.id %>
+<% title "Container" %>
 
 <p>
-  <b>Label:</b>
-  <%=h @container.label %>
+  <strong>Name:</strong>
+  <%=h @container.name %>
+</p>
+<p>
+  <strong>Description:</strong>
+  <%=h @container.description %>
 </p>
 
 <p>
-  <b>Mediatype:</b>
-  <%=h @container.mediatype_id %>
+  <%= link_to "Edit", edit_container_path(@container) %> |
+  <%= link_to "Destroy", @container, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "View All", containers_path %>
 </p>
-
-<p>
-  <b>Containertype:</b>
-  <%=h @container.containertype_id %>
-</p>
-
-<p>
-  <b>Comment:</b>
-  <%=h @container.comment %>
-</p>
-
-
-<%= link_to 'Edit', edit_container_path(@container) %> |
-<%= link_to 'Back', containers_path %>

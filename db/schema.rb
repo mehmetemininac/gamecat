@@ -9,60 +9,11 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 8) do
+ActiveRecord::Schema.define(:version => 1) do
 
   create_table "containers", :force => true do |t|
-    t.string   "label"
-    t.integer  "mediatype_id"
-    t.integer  "containertype_id"
-    t.text     "comment"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.boolean  "given"
-    t.string   "gave_to"
-    t.datetime "given_on"
-  end
-
-  create_table "containertypes", :force => true do |t|
     t.string   "name"
-    t.string   "shortname"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "contents", :force => true do |t|
-    t.string   "title"
-    t.integer  "gametype_id"
-    t.text     "content_data"
-    t.integer  "contenttype_id"
-    t.text     "comment"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "contenttypes", :force => true do |t|
-    t.string   "name"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "disctypes", :force => true do |t|
-    t.string   "name"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "gamecategories", :force => true do |t|
-    t.string   "name"
-    t.string   "shortname"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "mediatypes", :force => true do |t|
-    t.string   "name"
-    t.string   "shortname"
-    t.string   "description"
+    t.text     "description"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

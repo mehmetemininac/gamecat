@@ -1,45 +1,54 @@
 require 'test_helper'
 
 class ContainersControllerTest < ActionController::TestCase
-  test "should get index" do
+  def test_index
     get :index
-    assert_response :success
-    assert_not_nil assigns(:containers)
+    assert_template 'index'
   end
-
-  test "should get new" do
+  
+  def test_show
+    get :show, :id => Container.first
+    assert_template 'show'
+  end
+  
+  def test_new
     get :new
-    assert_response :success
+    assert_template 'new'
   end
-
-  test "should create container" do
-    assert_difference('Container.count') do
-      post :create, :container => { }
-    end
-
-    assert_redirected_to container_path(assigns(:container))
+  
+  def test_create_invalid
+    Container.any_instance.stubs(:valid?).returns(false)
+    post :create
+    assert_template 'new'
   end
-
-  test "should show container" do
-    get :show, :id => containers(:one).to_param
-    assert_response :success
+  
+  def test_create_valid
+    Container.any_instance.stubs(:valid?).returns(true)
+    post :create
+    assert_redirected_to container_url(assigns(:container))
   end
-
-  test "should get edit" do
-    get :edit, :id => containers(:one).to_param
-    assert_response :success
+  
+  def test_edit
+    get :edit, :id => Container.first
+    assert_template 'edit'
   end
-
-  test "should update container" do
-    put :update, :id => containers(:one).to_param, :container => { }
-    assert_redirected_to container_path(assigns(:container))
+  
+  def test_update_invalid
+    Container.any_instance.stubs(:valid?).returns(false)
+    put :update, :id => Container.first
+    assert_template 'edit'
   end
-
-  test "should destroy container" do
-    assert_difference('Container.count', -1) do
-      delete :destroy, :id => containers(:one).to_param
-    end
-
-    assert_redirected_to containers_path
+  
+  def test_update_valid
+    Container.any_instance.stubs(:valid?).returns(true)
+    put :update, :id => Container.first
+    assert_redirected_to container_url(assigns(:container))
+  end
+  
+  def test_destroy
+    container = Container.first
+    delete :destroy, :id => container
+    assert_redirected_to containers_url
+    assert !Container.exists?(container.id)
   end
 end

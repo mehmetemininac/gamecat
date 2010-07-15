@@ -1,29 +1,5 @@
-<h1>New container</h1>
+<% title "New Container" %>
 
-<p>Container # <%= Container.all.empty? ? '1' : Container.last.id + 1 %>
+<%= render :partial => 'form' %>
 
-<% form_for(@container) do |f| %>
-  <%= f.error_messages %>
-
-  <p>
-    <%= f.label :label %><br />
-    <%= f.text_field :label %>
-  </p>
-  <p>
-    <%= f.label :mediatype_id %><br />
-    <%= collection_select @container, :mediatype_id, Mediatype.all, :id, :shortname %>
-  </p>
-  <p>
-    <%= f.label :containertype_id %><br />
-    <%= collection_select @container, :containertype_id, Containertype.all, :id, :shortname %>
-  </p>
-  <p>
-    <%= f.label :comment %><br />
-    <%= f.text_area :comment %>
-  </p>
-  <p>
-    <%= f.submit 'Create' %>
-  </p>
-<% end %>
-
-<%= link_to 'Back', containers_path %>
+<p><%= link_to "Back to List", containers_path %></p>
