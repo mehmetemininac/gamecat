@@ -1,0 +1,16 @@
+<% title "Moviegenere" %>
+
+<p>
+  <strong>Name:</strong>
+  <%=h @moviegenere.name %>
+</p>
+<p>
+  <strong>Description:</strong>
+  <%=h @moviegenere.description %>
+</p>
+
+<p>
+  <%= link_to "Edit", edit_moviegenere_path(@moviegenere) %> |
+  <%= link_to "Destroy", @moviegenere, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "View All", moviegeneres_path %>
+</p>

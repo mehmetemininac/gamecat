@@ -1,4 +1,18 @@
 ActionController::Routing::Routes.draw do |map|
+  map.resources :gamegeneres
+
+  map.resources :contents
+
+  map.resources :moviegeneres
+
+  map.resources :contentcategories
+
+  map.resources :contenttypes
+
+  map.resources :disctypes
+
+  map.resources :discs
+
   map.resources :containers
 
   # The priority is based upon order of creation: first created -> highest priority.
@@ -42,4 +56,5 @@ ActionController::Routing::Routes.draw do |map|
   # consider removing or commenting them out if you're using named routes and resources.
   map.connect ':controller/:action/:id'
   map.connect ':controller/:action/:id.:format'
+  map.root :controller => 'application', :action => 'index'
 end

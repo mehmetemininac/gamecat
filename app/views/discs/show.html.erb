@@ -1,0 +1,40 @@
+<% title "Disc" %>
+
+<p>
+  <strong>Number:</strong>
+  <%=h @disc.number %>
+</p>
+<p>
+  <strong>Label:</strong>
+  <%=h @disc.label %>
+</p>
+<p>
+  <strong>Disktype:</strong>
+  <%=h @disc.disktype_id %>
+</p>
+<p>
+  <strong>Given:</strong>
+  <%=h @disc.given %>
+</p>
+<p>
+  <strong>Given To:</strong>
+  <%=h @disc.given_to %>
+</p>
+<p>
+  <strong>Gived On:</strong>
+  <%=h @disc.gived_on %>
+</p>
+<p>
+  <strong>Container:</strong>
+  <%=h @disc.container_id %>
+</p>
+<p>
+  <strong>Comment:</strong>
+  <%=h @disc.comment %>
+</p>
+
+<p>
+  <%= link_to "Edit", edit_disc_path(@disc) %> |
+  <%= link_to "Destroy", @disc, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "View All", discs_path %>
+</p>

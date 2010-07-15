@@ -1,0 +1,27 @@
+one:
+  name: MyString
+  contenttype_id: 1
+  gamegenere_id: 1
+  contentcategory_id: 1
+  disc_id: 1
+  cracked: false
+  original: false
+  moviegenere_id: 1
+  moviequality: MyString
+  movieyear: 1
+  subtitules: MyString
+  comment: MyText
+
+two:
+  name: MyString
+  contenttype_id: 1
+  gamegenere_id: 1
+  contentcategory_id: 1
+  disc_id: 1
+  cracked: false
+  original: false
+  moviegenere_id: 1
+  moviequality: MyString
+  movieyear: 1
+  subtitules: MyString
+  comment: MyText

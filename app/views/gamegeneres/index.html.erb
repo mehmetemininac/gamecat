@@ -1,0 +1,19 @@
+<% title "Gamegeneres" %>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Description</th>
+  </tr>
+  <% for gamegenere in @gamegeneres %>
+    <tr>
+      <td><%=h gamegenere.name %></td>
+      <td><%=h gamegenere.description %></td>
+      <td><%= link_to "Show", gamegenere %></td>
+      <td><%= link_to "Edit", edit_gamegenere_path(gamegenere) %></td>
+      <td><%= link_to "Destroy", gamegenere, :confirm => 'Are you sure?', :method => :delete %></td>
+    </tr>
+  <% end %>
+</table>
+
+<p><%= link_to "New Gamegenere", new_gamegenere_path %></p>

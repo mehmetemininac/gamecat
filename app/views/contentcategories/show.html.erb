@@ -1,0 +1,16 @@
+<% title "Contentcategory" %>
+
+<p>
+  <strong>Name:</strong>
+  <%=h @contentcategory.name %>
+</p>
+<p>
+  <strong>Description:</strong>
+  <%=h @contentcategory.description %>
+</p>
+
+<p>
+  <%= link_to "Edit", edit_contentcategory_path(@contentcategory) %> |
+  <%= link_to "Destroy", @contentcategory, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "View All", contentcategories_path %>
+</p>

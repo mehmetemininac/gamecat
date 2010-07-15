@@ -1,0 +1,19 @@
+<% title "Disctypes" %>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Description</th>
+  </tr>
+  <% for disctype in @disctypes %>
+    <tr>
+      <td><%=h disctype.name %></td>
+      <td><%=h disctype.description %></td>
+      <td><%= link_to "Show", disctype %></td>
+      <td><%= link_to "Edit", edit_disctype_path(disctype) %></td>
+      <td><%= link_to "Destroy", disctype, :confirm => 'Are you sure?', :method => :delete %></td>
+    </tr>
+  <% end %>
+</table>
+
+<p><%= link_to "New Disctype", new_disctype_path %></p>

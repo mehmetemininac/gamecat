@@ -1,0 +1,56 @@
+<% title "Content" %>
+
+<p>
+  <strong>Name:</strong>
+  <%=h @content.name %>
+</p>
+<p>
+  <strong>Contenttype:</strong>
+  <%=h @content.contenttype_id %>
+</p>
+<p>
+  <strong>Gamegenere:</strong>
+  <%=h @content.gamegenere_id %>
+</p>
+<p>
+  <strong>Contentcategory:</strong>
+  <%=h @content.contentcategory_id %>
+</p>
+<p>
+  <strong>Disc:</strong>
+  <%=h @content.disc_id %>
+</p>
+<p>
+  <strong>Cracked:</strong>
+  <%=h @content.cracked %>
+</p>
+<p>
+  <strong>Original:</strong>
+  <%=h @content.original %>
+</p>
+<p>
+  <strong>Moviegenere:</strong>
+  <%=h @content.moviegenere_id %>
+</p>
+<p>
+  <strong>Moviequality:</strong>
+  <%=h @content.moviequality %>
+</p>
+<p>
+  <strong>Movieyear:</strong>
+  <%=h @content.movieyear %>
+</p>
+<p>
+  <strong>Subtitules:</strong>
+  <%=h @content.subtitules %>
+</p>
+<p>
+  <strong>Comment:</strong>
+  <%=h @content.comment %>
+</p>
+
+<p>
+  <%= link_to "Edit", edit_content_path(@content) %> |
+  <%= link_to "Destroy", @content, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "View All", contents_path %>
+</p>

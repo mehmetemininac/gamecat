@@ -1,0 +1,16 @@
+<% title "Gamegenere" %>
+
+<p>
+  <strong>Name:</strong>
+  <%=h @gamegenere.name %>
+</p>
+<p>
+  <strong>Description:</strong>
+  <%=h @gamegenere.description %>
+</p>
+
+<p>
+  <%= link_to "Edit", edit_gamegenere_path(@gamegenere) %> |
+  <%= link_to "Destroy", @gamegenere, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "View All", gamegeneres_path %>
+</p>

@@ -1,0 +1,19 @@
+one:
+  number: 1
+  label: MyString
+  disktype_id: 1
+  given: false
+  given_to: MyString
+  gived_on: 2010-07-15 16:18:49
+  container_id: 1
+  comment: MyText
+
+two:
+  number: 1
+  label: MyString
+  disktype_id: 1
+  given: false
+  given_to: MyString
+  gived_on: 2010-07-15 16:18:49
+  container_id: 1
+  comment: MyText

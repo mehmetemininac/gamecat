@@ -1,0 +1,16 @@
+<% title "Contenttype" %>
+
+<p>
+  <strong>Name:</strong>
+  <%=h @contenttype.name %>
+</p>
+<p>
+  <strong>Description:</strong>
+  <%=h @contenttype.description %>
+</p>
+
+<p>
+  <%= link_to "Edit", edit_contenttype_path(@contenttype) %> |
+  <%= link_to "Destroy", @contenttype, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "View All", contenttypes_path %>
+</p>

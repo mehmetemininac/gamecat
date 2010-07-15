@@ -1,0 +1,19 @@
+<% title "Moviegeneres" %>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Description</th>
+  </tr>
+  <% for moviegenere in @moviegeneres %>
+    <tr>
+      <td><%=h moviegenere.name %></td>
+      <td><%=h moviegenere.description %></td>
+      <td><%= link_to "Show", moviegenere %></td>
+      <td><%= link_to "Edit", edit_moviegenere_path(moviegenere) %></td>
+      <td><%= link_to "Destroy", moviegenere, :confirm => 'Are you sure?', :method => :delete %></td>
+    </tr>
+  <% end %>
+</table>
+
+<p><%= link_to "New Moviegenere", new_moviegenere_path %></p>

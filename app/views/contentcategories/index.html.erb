@@ -1,0 +1,19 @@
+<% title "Contentcategories" %>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Description</th>
+  </tr>
+  <% for contentcategory in @contentcategories %>
+    <tr>
+      <td><%=h contentcategory.name %></td>
+      <td><%=h contentcategory.description %></td>
+      <td><%= link_to "Show", contentcategory %></td>
+      <td><%= link_to "Edit", edit_contentcategory_path(contentcategory) %></td>
+      <td><%= link_to "Destroy", contentcategory, :confirm => 'Are you sure?', :method => :delete %></td>
+    </tr>
+  <% end %>
+</table>
+
+<p><%= link_to "New Contentcategory", new_contentcategory_path %></p>

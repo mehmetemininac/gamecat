@@ -1,0 +1,16 @@
+<% title "Disctype" %>
+
+<p>
+  <strong>Name:</strong>
+  <%=h @disctype.name %>
+</p>
+<p>
+  <strong>Description:</strong>
+  <%=h @disctype.description %>
+</p>
+
+<p>
+  <%= link_to "Edit", edit_disctype_path(@disctype) %> |
+  <%= link_to "Destroy", @disctype, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "View All", disctypes_path %>
+</p>
