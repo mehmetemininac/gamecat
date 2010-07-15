@@ -1,0 +1,16 @@
+log/*
+db/*.sqlite3
+tmp/**/*
+*.cal
+\#*#
+typescript
+*.save
+*.save.*
+index/*
+app/stylesheets/.sass-cache/*
+db/schema.rb
+public/system
+*.*~
+*.dump
+db/sphinx/*
+# config/environment.rb
