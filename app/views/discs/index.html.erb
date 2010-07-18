@@ -12,7 +12,7 @@
   <% for disc in @discs %>
     <tr>
       <td><%=h disc.number %></td>
-      <td><%=h disc.label %></td>
+      <td><%=h disc.label.size > 30 ? disc.label[0..25] + '[...]' : disc.label %></td>
       <td><%=h disc.disctype.name %></td>
       <td><%=h disc.given %></td>
       <td><%=h disc.container.name %></td>
