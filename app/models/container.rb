@@ -12,4 +12,6 @@
 
 class Container < ActiveRecord::Base
   attr_accessible :name, :description
+  
+  has_many :discs
 end

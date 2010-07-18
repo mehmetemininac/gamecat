@@ -18,4 +18,8 @@
 
 class Disc < ActiveRecord::Base
   attr_accessible :number, :label, :disktype_id, :given, :given_to, :gived_on, :container_id, :comment
+  
+  has_many :contents
+  belongs_to :disktype
+  belongs_to :container
 end
