@@ -9,7 +9,13 @@ class DiscsController < ApplicationController
   end
   
   def new
-    @disc = Disc.new
+    last_disc = Disc.last
+    if last_disc
+      last_number = last_disc.number.to_i + 1
+    else
+      last_number = 1
+    end
+    @disc = Disc.new(:number => last_number.to_s)
   end
   
   def create
@@ -29,7 +35,7 @@ class DiscsController < ApplicationController
     @disc = Disc.find(params[:id])
     if @disc.update_attributes(params[:disc])
       flash[:notice] = "Successfully updated disc."
-      redirect_to @disc
+      redirect_to discs_path
     else
       render :action => 'edit'
     end

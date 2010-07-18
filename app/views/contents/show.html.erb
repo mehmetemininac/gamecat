@@ -6,19 +6,27 @@
 </p>
 <p>
   <strong>Contenttype:</strong>
-  <%=h @content.contenttype_id %>
-</p>
-<p>
-  <strong>Gamegenere:</strong>
-  <%=h @content.gamegenere_id %>
-</p>
-<p>
-  <strong>Contentcategory:</strong>
-  <%=h @content.contentcategory_id %>
+  <%=h @content.contenttype_id.nil? ? 'N/A' : @content.contenttype.name %>
 </p>
 <p>
   <strong>Disc:</strong>
-  <%=h @content.disc_id %>
+  <% if @content.disc_ids.empty? %>
+    'N/A'
+  <% else %>
+    <ul>
+      <% @content.discs.each do |disc| %>
+        <li><%=h [disc.container.name, disc.number, disc.label].join(' - ')%></li>
+      <% end %>
+    </ul>
+  <% end %>
+</p>
+<p>
+  <strong>Gamegenere:</strong>
+  <%=h @content.gamegenere_id.nil? ? 'N/A' : @content.gamegenere.name %>
+</p>
+<p>
+  <strong>Contentcategory:</strong>
+  <%=h @content.contentcategory_id.nil? ? 'N/A' : @content.contentcategory.name %>
 </p>
 <p>
   <strong>Cracked:</strong>
@@ -30,7 +38,7 @@
 </p>
 <p>
   <strong>Moviegenere:</strong>
-  <%=h @content.moviegenere_id %>
+  <%=h @content.moviegenere_id.nil? ? 'N/A' : @content.moviegenere.name %>
 </p>
 <p>
   <strong>Moviequality:</strong>

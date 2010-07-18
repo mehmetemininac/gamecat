@@ -4,13 +4,13 @@
   <tr>
     <th>Name</th>
     <th>Contenttype</th>
-    <th>Disc</th>
+    <th>Discs</th>
   </tr>
   <% for content in @contents %>
     <tr>
       <td><%=h content.name %></td>
-      <td><%=h content.contenttype_id %></td>
-      <td><%=h content.disc_id %></td>
+      <td><%=h content.contenttype.name %></td>
+      <td><%=h content.disc_ids.empty? ? 'None' : content.discs.collect{|d| d.number}.join(', ') %></td>
       <td><%= link_to "Show", content %></td>
       <td><%= link_to "Edit", edit_content_path(content) %></td>
       <td><%= link_to "Destroy", content, :confirm => 'Are you sure?', :method => :delete %></td>

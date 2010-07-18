@@ -7,6 +7,7 @@
     <th>Disctype</th>
     <th>Given</th>
     <th>Container</th>
+    <th>Location</th>
   </tr>
   <% for disc in @discs %>
     <tr>
@@ -15,6 +16,7 @@
       <td><%=h disc.disctype.name %></td>
       <td><%=h disc.given %></td>
       <td><%=h disc.container.name %></td>
+      <td><%=h disc.location %></td>
       <td><%= link_to "Show", disc %></td>
       <td><%= link_to "Edit", edit_disc_path(disc) %></td>
       <td><%= link_to "Destroy", disc, :confirm => 'Are you sure?', :method => :delete %></td>

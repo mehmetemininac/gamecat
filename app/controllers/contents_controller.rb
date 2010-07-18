@@ -15,7 +15,7 @@ class ContentsController < ApplicationController
     @content = Content.new(params[:content])
     if @content.save
       flash[:notice] = "Successfully created content."
-      redirect_to @content
+      redirect_to new_content_path
     else
       render :action => 'new'
     end
