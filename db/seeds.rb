@@ -6,7 +6,10 @@
 #   cities = City.create([{ :name => 'Chicago' }, { :name => 'Copenhagen' }])
 #   Major.create(:name => 'Daley', :city => cities.first)
 
+puts 'Loading basic data fro application'
+
 # Common disc Types loaded
+puts 'Loading Disc Types...'
 Disctype.new(:name => 'CD-ROM', :description => 'Capacity: 700 MB').save
 Disctype.new(:name => 'CD-R', :description => 'Capacity: 700 MB').save
 Disctype.new(:name => 'CD-RW', :description => 'Capacity: 700 MB').save
@@ -16,6 +19,7 @@ Disctype.new(:name => 'DVD18', :description => 'Capacity: 15 GB').save
 Disctype.new(:name => 'BLU-RAY', :description => 'Capacity: 25 GB').save
 
 # Basic Game Generes
+puts 'Loading Game Genres...'
 Gamegenere.new(:name => 'FPS', :description => '').save
 Gamegenere.new(:name => 'TPS', :description => '').save
 Gamegenere.new(:name => 'FPS/RPG', :description => '').save
@@ -33,6 +37,7 @@ Gamegenere.new(:name => 'Air Combat', :description => '').save
 Gamegenere.new(:name => 'Simulation', :description => '').save
 
 # Basic Movie Generes
+puts 'Loading Movie Generes...'
 Moviegenere.new(:name => 'Action', :description => '').save
 Moviegenere.new(:name => 'Drama', :description => '').save
 Moviegenere.new(:name => 'Comedy', :description => '').save
@@ -41,11 +46,13 @@ Moviegenere.new(:name => 'Adventure', :description => '').save
 Moviegenere.new(:name => 'Sci-Fi', :description => '').save
 
 # Different content typoes
+puts 'Loading Content Types...'
 Contenttype.new(:name => 'Game', :description => '').save
 Contenttype.new(:name => 'Program', :description => '').save
 Contenttype.new(:name => 'Backup', :description => '').save
 
 # Content Categories
+puts 'Loading Content Categories...'
 Contentcategory.new(:name => 'Game', :description => '').save
 Contentcategory.new(:name => 'Tool', :description => '').save
 Contentcategory.new(:name => 'Crack', :description => '').save
@@ -59,3 +66,5 @@ Contentcategory.new(:name => 'Game + Crack', :description => '').save
 Contentcategory.new(:name => 'General Documents', :description => '').save
 Contentcategory.new(:name => 'Photos', :description => '').save
 Contentcategory.new(:name => 'Suit', :description => '').save
+
+puts 'Loading Complete!'

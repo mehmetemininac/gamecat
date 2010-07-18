@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 9) do
+ActiveRecord::Schema.define(:version => 10) do
 
   create_table "containers", :force => true do |t|
     t.string   "name"
@@ -53,7 +53,6 @@ ActiveRecord::Schema.define(:version => 9) do
   create_table "discs", :force => true do |t|
     t.integer  "number"
     t.string   "label"
-    t.integer  "disktype_id"
     t.boolean  "given"
     t.string   "given_to"
     t.datetime "gived_on"
@@ -61,6 +60,7 @@ ActiveRecord::Schema.define(:version => 9) do
     t.text     "comment"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "disctype_id"
   end
 
   create_table "disctypes", :force => true do |t|
