@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 7) do
+ActiveRecord::Schema.define(:version => 8) do
 
   create_table "containers", :force => true do |t|
     t.string   "name"
@@ -63,6 +63,13 @@ ActiveRecord::Schema.define(:version => 7) do
   end
 
   create_table "disctypes", :force => true do |t|
+    t.string   "name"
+    t.text     "description"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "gamegeneres", :force => true do |t|
     t.string   "name"
     t.text     "description"
     t.datetime "created_at"

@@ -1,3 +1,21 @@
+# == Schema Information
+# Schema version: 8
+#
+# Table name: discs
+#
+#  id           :integer         not null, primary key
+#  number       :integer
+#  label        :string(255)
+#  disktype_id  :integer
+#  given        :boolean
+#  given_to     :string(255)
+#  gived_on     :datetime
+#  container_id :integer
+#  comment      :text
+#  created_at   :datetime
+#  updated_at   :datetime
+#
+
 one:
   number: 1
   label: MyString

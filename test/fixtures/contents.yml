@@ -1,3 +1,25 @@
+# == Schema Information
+# Schema version: 8
+#
+# Table name: contents
+#
+#  id                 :integer         not null, primary key
+#  name               :string(255)
+#  contenttype_id     :integer
+#  gamegenere_id      :integer
+#  contentcategory_id :integer
+#  disc_id            :integer
+#  cracked            :boolean
+#  original           :boolean
+#  moviegenere_id     :integer
+#  moviequality       :string(255)
+#  movieyear          :integer
+#  subtitules         :string(255)
+#  comment            :text
+#  created_at         :datetime
+#  updated_at         :datetime
+#
+
 one:
   name: MyString
   contenttype_id: 1
