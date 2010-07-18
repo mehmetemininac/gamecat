@@ -1,5 +1,6 @@
 class DiscsController < ApplicationController
   def index
+
     @discs = Disc.all
   end
   
@@ -15,12 +16,11 @@ class DiscsController < ApplicationController
     @disc = Disc.new(params[:disc])
     if @disc.save
       flash[:notice] = "Successfully created disc."
-      redirect_to @disc
+      redirect_to new_disc_path
     else
       render :action => 'new'
     end
   end
-  
   def edit
     @disc = Disc.find(params[:id])
   end
