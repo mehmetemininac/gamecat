@@ -9,12 +9,10 @@
     <tr>
       <td><%=h container.name %></td>
       <td><%=h container.description %></td>
-      <td><%= link_to "Show", container %></td>
-      <td><%= link_to "Edit", edit_container_path(container) %></td>
-      <td><%= link_to "Destroy", container, :confirm => 'Are you sure?', :method => :delete %></td>
+      <%= common_index_links container %>
     </tr>
   <% end %>
 </table>
 
-<p><%= link_to "New Container", new_container_path %></p>
-<p><%= link_to "Home", root_path %></p>
+<p><%= link_to (link_icon '001_01.png'), new_container_path %>
+<%= link_to (link_icon '001_20.png'), root_path %></p>
