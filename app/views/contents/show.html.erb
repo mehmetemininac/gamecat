@@ -9,7 +9,7 @@
   <%=h @content.contenttype_id.nil? ? 'N/A' : @content.contenttype.name %>
 </p>
 <p>
-  <strong>Disc:</strong>
+  <strong>Discs:</strong>
   <% if @content.disc_ids.empty? %>
     'N/A'
   <% else %>
@@ -42,15 +42,15 @@
 </p>
 <p>
   <strong>Moviequality:</strong>
-  <%=h @content.moviequality %>
+  <%=h @content.moviequality.nil? ? 'N/A' : @content.moviequality %>
 </p>
 <p>
   <strong>Movieyear:</strong>
-  <%=h @content.movieyear %>
+  <%=h @content.movieyear.nil? ? 'N/A' : @content.movieyear %>
 </p>
 <p>
   <strong>Subtitules:</strong>
-  <%=h @content.subtitules %>
+  <%=h @content.subtitules.nil? ? 'N/A' : @content.subtitules %>
 </p>
 <p>
   <strong>Comment:</strong>
@@ -60,5 +60,6 @@
 <p>
   <%= link_to "Edit", edit_content_path(@content) %> |
   <%= link_to "Destroy", @content, :confirm => 'Are you sure?', :method => :delete %> |
-  <%= link_to "View All", contents_path %>
+  <%= link_to "View All", contents_path %> |
+  <%= link_to "Edit Discs", edit_discs_path(@content) %>
 </p>

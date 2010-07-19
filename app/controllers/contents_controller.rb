@@ -21,6 +21,10 @@ class ContentsController < ApplicationController
     end
   end
   
+  def edit_discs
+    @content = Content.find_by_id params[:id]
+  end
+  
   def edit
     @content = Content.find(params[:id])
   end

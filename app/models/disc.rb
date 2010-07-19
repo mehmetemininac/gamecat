@@ -28,6 +28,6 @@ class Disc < ActiveRecord::Base
   
   
   def display_name
-    self.label
+    self.number.to_s + ' - ' + self.label
   end
 end

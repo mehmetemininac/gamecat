@@ -1,6 +1,7 @@
 ActionController::Routing::Routes.draw do |map|
   map.resources :gamegeneres
 
+  map.edit_discs '/contents/:id/edit_discs', :controller => 'contents', :action => 'edit_discs'
   map.resources :contents
 
   map.resources :moviegeneres
