@@ -16,20 +16,24 @@ en:
         description: Description
       content: 
         name: Name
-        contenttype_id: Content Type
-        gamegenere_id: Game Genre
-        contentcategory_id: Content Category
-        disc_id: Disc
+        contenttype: Content Type
+        gamegenere: Game Genre
+        contentcategory: Content Category
+        disc: Disc
         cracked: Cracked?
         original: Original?
-        moviegenere_id: Movie Genere
-        moviequaliry: Movie Quality
+        moviegenere: Movie Genere
+        moviequality: Movie Quality
         movieyear: Movie Year
         subtitules: Subtitules?
-        comment: Comment
+        comment: Comment/Content
       contentcategory:  
       contenttype:  
       disc: 
+        given: Given?
+        given_to: Given to...
+        original: Original?
+        comment: Comment/Content
       disctype:  
       gamegenere:  
       moviegenere:  

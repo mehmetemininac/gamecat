@@ -1,5 +1,5 @@
 # == Schema Information
-# Schema version: 8
+# Schema version: 15
 #
 # Table name: contenttypes
 #

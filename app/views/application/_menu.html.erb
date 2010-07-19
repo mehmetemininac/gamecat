@@ -1,11 +1,11 @@
 <ul>
-  <li><%= link_to 'Containers', containers_path %></li>
-  <li><%= link_to 'Discs', discs_path %></li>
-  <li><%= link_to 'Disc Types', disctypes_path %></li>
-  <li><%= link_to 'Content', contents_path %></li>
-  <li><%= link_to 'Content Types', contenttypes_path %></li>
+  <li><%= link_to "Containers", containers_path %></li>
+  <li><%= link_to "Discs(#{Disc.count})", discs_path %></li>
+  <li><%= link_to "Content(#{Content.count})", contents_path %></li>
   <hr/>
-  <li><%= link_to 'Content Categories', contentcategories_path %></li>
-  <li><%= link_to 'Game Generes', gamegeneres_path %></li>
-  <li><%= link_to 'Movie Generes', moviegeneres_path %></li>
+  <li><%= link_to "Disc Types", disctypes_path %></li>
+  <li><%= link_to "Content Types", contenttypes_path %></li>
+  <li><%= link_to "Content Categories", contentcategories_path %></li>
+  <li><%= link_to "Game Generes", gamegeneres_path %></li>
+  <li><%= link_to "Movie Generes", moviegeneres_path %></li>
 </ul>

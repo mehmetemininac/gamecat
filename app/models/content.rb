@@ -1,5 +1,5 @@
 # == Schema Information
-# Schema version: 8
+# Schema version: 15
 #
 # Table name: contents
 #
@@ -8,7 +8,6 @@
 #  contenttype_id     :integer
 #  gamegenere_id      :integer
 #  contentcategory_id :integer
-#  disc_id            :integer
 #  cracked            :boolean
 #  original           :boolean
 #  moviegenere_id     :integer
@@ -18,6 +17,8 @@
 #  comment            :text
 #  created_at         :datetime
 #  updated_at         :datetime
+#  date               :datetime
+#  language           :string(255)
 #
 
 class Content < ActiveRecord::Base

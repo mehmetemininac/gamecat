@@ -1,12 +1,11 @@
 # == Schema Information
-# Schema version: 8
+# Schema version: 15
 #
 # Table name: discs
 #
 #  id           :integer         not null, primary key
 #  number       :integer
 #  label        :string(255)
-#  disktype_id  :integer
 #  given        :boolean
 #  given_to     :string(255)
 #  gived_on     :datetime
@@ -14,6 +13,9 @@
 #  comment      :text
 #  created_at   :datetime
 #  updated_at   :datetime
+#  disctype_id  :integer
+#  original     :boolean
+#  location     :string(255)
 #
 
 one:
