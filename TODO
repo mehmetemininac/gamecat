@@ -1,8 +1,10 @@
 Add:
-- Language field to identefy game langugae or movie sound language
 - Complete dictionary for attribute names
 
 
 Missing:
 - Game Genere on content
 - Attributes on en.yml
+
+Data Missing:
+- Movie in content type
