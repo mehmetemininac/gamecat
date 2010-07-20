@@ -2,7 +2,7 @@
 module ApplicationHelper
   
   def link_icon image=nil
-    size = 18
+    size = 17
     icon_set = 'led_icons'
     unless image.nil?
       image_tag "icons/#{icon_set}/normal/#{image}", :mouseover => "icons/#{icon_set}/hoover/#{image}", :width => size, :height => size

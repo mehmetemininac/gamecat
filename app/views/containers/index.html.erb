@@ -8,7 +8,7 @@
   <% for container in @containers %>
     <tr>
       <td><%=h container.name %></td>
-      <td><%=h container.description %></td>
+      <td><%=h container.description.size > 100 ? container.description[0..95] + '[...]' : container.description %></td>
       <%= common_links :list, container %>
     </tr>
   <% end %>

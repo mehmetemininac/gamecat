@@ -26,6 +26,7 @@ class Content < ActiveRecord::Base
   
   belongs_to :contenttype
   belongs_to :contentcategory  
+  belongs_to :gamegenere
   has_many :disc_contents
   has_many :discs, :through => :disc_contents
   belongs_to :moviegenere
