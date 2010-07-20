@@ -33,8 +33,4 @@
   <pre><%=h @disc.comment %></pre>
 </p>
 
-<p>
-  <%= link_to "Edit", edit_disc_path(@disc) %> |
-  <%= link_to "Destroy", @disc, :confirm => 'Are you sure?', :method => :delete %> |
-  <%= link_to "View All", discs_path %>
-</p>
+<%= common_links :show, @disc %>

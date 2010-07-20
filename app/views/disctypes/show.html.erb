@@ -9,8 +9,4 @@
   <pre><%=h @disctype.description %></pre>
 </p>
 
-<p>
-  <%= link_to "Edit", edit_disctype_path(@disctype) %> |
-  <%= link_to "Destroy", @disctype, :confirm => 'Are you sure?', :method => :delete %> |
-  <%= link_to "View All", disctypes_path %>
-</p>
+<%= common_links :show, @disctype %>

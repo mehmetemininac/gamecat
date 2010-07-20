@@ -2,7 +2,4 @@
 
 <%= render :partial => 'form' %>
 
-<p>
-  <%= link_to "Show", @container %> |
-  <%= link_to "View All", containers_path %>
-</p>
+<%= common_links :edit, @container %>

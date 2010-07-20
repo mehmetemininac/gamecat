@@ -9,12 +9,8 @@
     <tr>
       <td><%=h contenttype.name %></td>
       <td><%=h contenttype.description %></td>
-      <td><%= link_to "Show", contenttype %></td>
-      <td><%= link_to "Edit", edit_contenttype_path(contenttype) %></td>
-      <td><%= link_to "Destroy", contenttype, :confirm => 'Are you sure?', :method => :delete %></td>
+      <%= common_links :list, contenttype %>
     </tr>
   <% end %>
 </table>
-
-<p><%= link_to "New Contenttype", new_contenttype_path %></p>
-<p><%= link_to "Home", root_path %></p>
+<%= common_links :main %>

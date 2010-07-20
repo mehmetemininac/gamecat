@@ -9,10 +9,8 @@
     <tr>
       <td><%=h container.name %></td>
       <td><%=h container.description %></td>
-      <%= common_index_links container %>
+      <%= common_links :list, container %>
     </tr>
   <% end %>
 </table>
-
-<p><%= link_to (link_icon '001_01.png'), new_container_path %>
-<%= link_to (link_icon '001_20.png'), root_path %></p>
+<%= common_links :main %>

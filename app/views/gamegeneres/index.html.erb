@@ -9,12 +9,8 @@
     <tr>
       <td><%=h gamegenere.name %></td>
       <td><%=h gamegenere.description %></td>
-      <td><%= link_to "Show", gamegenere %></td>
-      <td><%= link_to "Edit", edit_gamegenere_path(gamegenere) %></td>
-      <td><%= link_to "Destroy", gamegenere, :confirm => 'Are you sure?', :method => :delete %></td>
+      <%= common_links :list, gamegenere %>
     </tr>
   <% end %>
 </table>
-
-<p><%= link_to "New Gamegenere", new_gamegenere_path %></p>
-<p><%= link_to "Home", root_path %></p>
+<%= common_links :main %>

@@ -9,8 +9,4 @@
   <pre><%=h @container.description %></pre>
 </p>
 
-<p>
-  <%= link_to "Edit", edit_container_path(@container) %> |
-  <%= link_to "Destroy", @container, :confirm => 'Are you sure?', :method => :delete %> |
-  <%= link_to "View All", containers_path %>
-</p>
+<%= common_links :show, @container %>

@@ -2,7 +2,4 @@
 
 <%= render :partial => 'form' %>
 
-<p>
-  <%= link_to "Show", @moviegenere %> |
-  <%= link_to "View All", moviegeneres_path %>
-</p>
+<%= common_links :edit, @moviegenere %>

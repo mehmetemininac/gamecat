@@ -17,12 +17,8 @@
       <td><%=h disc.given %></td>
       <td><%=h disc.container.name %></td>
       <td><%=h disc.location %></td>
-      <td><%= link_to "Show", disc %></td>
-      <td><%= link_to "Edit", edit_disc_path(disc) %></td>
-      <td><%= link_to "Destroy", disc, :confirm => 'Are you sure?', :method => :delete %></td>
+      <%= common_links :list, disc %>
     </tr>
   <% end %>
 </table>
-
-<p><%= link_to "New Disc", new_disc_path %></p>
-<p><%= link_to "Home", root_path %></p>
+<%= common_links :main %>

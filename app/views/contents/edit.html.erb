@@ -2,8 +2,4 @@
 
 <%= render :partial => 'form' %>
 
-<p>
-  <%= link_to "Show", @content %> |
-  <%= link_to "View All", contents_path %> |
-  <%= link_to "Edit Discs", edit_discs_path(@content) %>
-</p>
+<%= common_links :edit_discs, @content %>

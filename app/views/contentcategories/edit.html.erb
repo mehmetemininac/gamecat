@@ -2,7 +2,4 @@
 
 <%= render :partial => 'form' %>
 
-<p>
-  <%= link_to "Show", @contentcategory %> |
-  <%= link_to "View All", contentcategories_path %>
-</p>
+<%= common_links :edit, @contentcategory %>

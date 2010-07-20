@@ -9,10 +9,8 @@
     <tr>
       <td><%=h contentcategory.name %></td>
       <td><%=h contentcategory.description %></td>
-      <%= common_index_links contentcategory %>
+      <%= common_links :list, contentcategory %>
     </tr>
   <% end %>
 </table>
-
-<p><%= link_to "New Contentcategory", new_contentcategory_path %></p>
-<p><%= link_to "Home", root_path %></p>
+<%= common_links :main %>

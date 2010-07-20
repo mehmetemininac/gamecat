@@ -9,8 +9,4 @@
   <pre><%=h @contenttype.description %></pre>
 </p>
 
-<p>
-  <%= link_to "Edit", edit_contenttype_path(@contenttype) %> |
-  <%= link_to "Destroy", @contenttype, :confirm => 'Are you sure?', :method => :delete %> |
-  <%= link_to "View All", contenttypes_path %>
-</p>
+<%= common_links :show, @contenttype %>
