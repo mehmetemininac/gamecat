@@ -22,7 +22,7 @@
 #
 
 class Content < ActiveRecord::Base
-  attr_accessible :name, :contenttype_id, :gamegenere_id, :contentcategory_id, :disc_ids, :cracked, :original, :moviegenere_id, :moviequality, :movieyear, :subtitules, :comment
+  attr_accessible :name, :contenttype_id, :gamegenere_id, :contentcategory_id, :disc_ids, :cracked, :original, :moviegenere_id, :moviequality, :movieyear, :subtitules, :comment, :language
   
   belongs_to :contenttype
   belongs_to :contentcategory  
