@@ -1,0 +1,20 @@
+<h1>Search Disc</h1>
+<div>
+  <%= form_tag search_discs_path %>
+
+  <p>
+    <%= text_field_tag :query, params[:query] %>
+    <%= submit_tag 'Search' %>
+  </p>
+</div>
+<%= link_to "Home", root_path %>
+<% if @results %>
+  <div>
+    <ul>
+      <% @results.all.each do |item| %>
+        <li><%= link_to "#{item.number} - #{item.container.name} #{item.location} - #{item.label}", disc_path(item.id), :title => item.comment.blank? ? "No comment" : item.comment %></li>
+      <% end %>
+    </ul>
+  </div>
+<% end %>
+

@@ -20,15 +20,17 @@
 
 class Disc < ActiveRecord::Base
   attr_accessible :number, :location, :label, :disctype_id, :given, :given_to, :gived_on, :container_id, :comment
-  
+
+  acts_as_indexed :fields => [:label, :comment]
+
   has_many :disc_contents
   has_many :contents, :through => :disc_contents
   belongs_to :disctype
   belongs_to :container
-  
+
   validates_presence_of :number, :disctype, :container, :location
-  
-  
+
+
   def display_name
     self.number.to_s + ' - ' + self.label
   end

@@ -12,6 +12,7 @@ ActionController::Routing::Routes.draw do |map|
 
   map.resources :disctypes
 
+  map.search_discs 'discs/search', :controller => 'discs', :action => 'search'
   map.resources :discs
 
   map.resources :containers
@@ -34,7 +35,7 @@ ActionController::Routing::Routes.draw do |map|
 
   # Sample resource route with sub-resources:
   #   map.resources :products, :has_many => [ :comments, :sales ], :has_one => :seller
-  
+
   # Sample resource route with more complex sub-resources
   #   map.resources :products do |products|
   #     products.resources :comments

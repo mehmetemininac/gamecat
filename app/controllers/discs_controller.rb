@@ -3,11 +3,11 @@ class DiscsController < ApplicationController
 
     @discs = Disc.all
   end
-  
+
   def show
     @disc = Disc.find(params[:id])
   end
-  
+
   def new
     last_disc = Disc.last
     if last_disc
@@ -17,7 +17,7 @@ class DiscsController < ApplicationController
     end
     @disc = Disc.new(:number => last_number.to_s)
   end
-  
+
   def create
     @disc = Disc.new(params[:disc])
     if @disc.save
@@ -30,7 +30,7 @@ class DiscsController < ApplicationController
   def edit
     @disc = Disc.find(params[:id])
   end
-  
+
   def update
     @disc = Disc.find(params[:id])
     if @disc.update_attributes(params[:disc])
@@ -40,11 +40,18 @@ class DiscsController < ApplicationController
       render :action => 'edit'
     end
   end
-  
+
   def destroy
     @disc = Disc.find(params[:id])
     @disc.destroy
     flash[:notice] = "Successfully destroyed disc."
     redirect_to discs_url
   end
+
+  def search
+    if request.post?
+      @results = Disc.with_query(params[:query])
+    end
+  end
+
 end
