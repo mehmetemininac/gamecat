@@ -1,7 +1,7 @@
 class DiscsController < ApplicationController
   def index
 
-    @discs = Disc.all
+    @discs = Disc.paginate :page => params[:page], :per_page => 20
   end
 
   def show
@@ -50,7 +50,7 @@ class DiscsController < ApplicationController
 
   def search
     if request.post?
-      @results = Disc.with_query(params[:query])
+      @discs = Disc.with_query(params[:query]).paginate(:page => params[:page], :per_page => 20)
     end
   end
 

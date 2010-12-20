@@ -8,13 +8,15 @@
   </p>
 </div>
 <%= link_to "Home", root_path %>
-<% if @results %>
+<% if @discs %>
   <div>
     <ul>
-      <% @results.all.each do |item| %>
+      <% @discs.each do |item| %>
         <li><%= link_to "#{item.number} - #{item.container.name} #{item.location} - #{item.label}", disc_path(item.id), :title => item.comment.blank? ? "No comment" : item.comment %></li>
       <% end %>
     </ul>
   </div>
+  <%= will_paginate @discs %>
 <% end %>
+
 
