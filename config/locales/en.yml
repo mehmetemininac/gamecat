@@ -10,11 +10,12 @@ en:
       disctype: Disc Type
       gamegenere: Game Genere
       moviegenere: Movie Genre
+      user: User
     attributes:
-      container: 
+      container:
         name: Name
         description: Description
-      content: 
+      content:
         name: Name
         contenttype: Content Type
         gamegenere: Game Genre
@@ -27,16 +28,16 @@ en:
         movieyear: Movie Year
         subtitules: Subtitules?
         comment: Comment/Content
-      contentcategory:  
-      contenttype:  
-      disc: 
+      contentcategory:
+      contenttype:
+      disc:
         given: Given?
         given_to: Given to...
         original: Original?
         comment: Comment/Content
-      disctype:  
-      gamegenere:  
-      moviegenere:  
+      disctype:
+      gamegenere:
+      moviegenere:
 
     errors:
       template:
@@ -81,7 +82,7 @@ en:
       #       attributes:
       #         login:
       #           blank: "This is a custom blank message for User login"
-      # Will define custom blank validation message for User model and 
+      # Will define custom blank validation message for User model and
       # custom blank validation message for login attribute of User model.
       models:
 
@@ -94,10 +95,10 @@ en:
       short: "%b %d"
       long: "%B %d, %Y"
       custom: "asd"
-      
+
     day_names: [Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday]
     abbr_day_names: [Sun, Mon, Tue, Wed, Thu, Fri, Sat]
-      
+
     # Don't forget the nil at the beginning; there's no such thing as a 0th month
     month_names: [~, January, February, March, April, May, June, July, August, September, October, November, December]
     abbr_month_names: [~, Jan, Feb, Mar, Apr, May, Jun, Jul, Aug, Sep, Oct, Nov, Dec]
@@ -111,7 +112,7 @@ en:
       long: "%B %d, %Y %H:%M"
     am: "am"
     pm: "pm"
-      
+
 # Used in array.to_sentence.
   support:
     array:
@@ -130,7 +131,7 @@ en:
       delimiter: ","
       # Number of decimals, behind the separator (the number 1 with a precision of 2 gives: 1.00)
       precision: 3
-      
+
     # Used in number_to_currency()
     currency:
       format:
@@ -141,15 +142,15 @@ en:
         separator: "."
         delimiter: ","
         precision: 2
-        
+
     # Used in number_to_percentage()
     percentage:
       format:
         # These three are to override number.format and are optional
-        # separator: 
+        # separator:
         delimiter: ""
-        # precision: 
-        
+        # precision:
+
     # Used in number_to_precision()
     precision:
       format:
@@ -157,12 +158,12 @@ en:
         # separator:
         delimiter: ""
         # precision:
-        
+
     # Used in number_to_human_size()
     human:
       format:
         # These three are to override number.format and are optional
-        # separator: 
+        # separator:
         delimiter: ""
         precision: 1
       storage_units:

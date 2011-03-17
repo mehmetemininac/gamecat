@@ -1,4 +1,7 @@
 en:
+  activerecord:
+    models:
+      user: User
   devise:
     sessions:
       link: 'Sign in'
