@@ -8,7 +8,6 @@ typescript
 *.save.*
 index/*
 app/stylesheets/.sass-cache/*
-db/schema.rb
 public/system
 *.*~
 *.dump
