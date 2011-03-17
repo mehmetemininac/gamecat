@@ -1,4 +1,6 @@
 ActionController::Routing::Routes.draw do |map|
+  map.devise_for :users
+
   map.resources :gamegeneres
 
   map.edit_discs '/contents/:id/edit_discs', :controller => 'contents', :action => 'edit_discs'
