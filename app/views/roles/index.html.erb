@@ -7,11 +7,10 @@
   <% for role in @roles %>
     <tr>
       <td><%=h role.name %></td>
-      <td><%= link_to "Show", role %></td>
-      <td><%= link_to "Edit", edit_role_path(role) %></td>
-      <td><%= link_to "Destroy", role, :confirm => 'Are you sure?', :method => :delete %></td>
+      <%= common_links :list, role %>
     </tr>
   <% end %>
 </table>
 
-<p><%= link_to "New Role", new_role_path %></p>
+<%= common_links :main %>
+
