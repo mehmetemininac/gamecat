@@ -23,6 +23,7 @@ Rails::Initializer.run do |config|
   config.gem 'formtastic'
   config.gem 'devise', :version => '1.0.8'
   config.gem 'cancan'
+  # config.gem 'nifty-generators'
 
 
   # Only load the plugins named here, in the order given (default is alphabetical).
@@ -46,5 +47,4 @@ Rails::Initializer.run do |config|
 
   config.active_record.timestamped_migrations = false
 
-  config.action_mailer.default_url_options = { :host => 'localhost:3000' }
 end
