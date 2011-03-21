@@ -1,16 +1,18 @@
 class GamegeneresController < ApplicationController
+  authorize_resource
+
   def index
     @gamegeneres = Gamegenere.all
   end
-  
+
   def show
     @gamegenere = Gamegenere.find(params[:id])
   end
-  
+
   def new
     @gamegenere = Gamegenere.new
   end
-  
+
   def create
     @gamegenere = Gamegenere.new(params[:gamegenere])
     if @gamegenere.save
@@ -20,11 +22,11 @@ class GamegeneresController < ApplicationController
       render :action => 'new'
     end
   end
-  
+
   def edit
     @gamegenere = Gamegenere.find(params[:id])
   end
-  
+
   def update
     @gamegenere = Gamegenere.find(params[:id])
     if @gamegenere.update_attributes(params[:gamegenere])
@@ -34,7 +36,7 @@ class GamegeneresController < ApplicationController
       render :action => 'edit'
     end
   end
-  
+
   def destroy
     @gamegenere = Gamegenere.find(params[:id])
     @gamegenere.destroy

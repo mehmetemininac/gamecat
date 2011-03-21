@@ -1,16 +1,18 @@
 class DisctypesController < ApplicationController
+  authorize_resource
+
   def index
     @disctypes = Disctype.all
   end
-  
+
   def show
     @disctype = Disctype.find(params[:id])
   end
-  
+
   def new
     @disctype = Disctype.new
   end
-  
+
   def create
     @disctype = Disctype.new(params[:disctype])
     if @disctype.save
@@ -20,11 +22,11 @@ class DisctypesController < ApplicationController
       render :action => 'new'
     end
   end
-  
+
   def edit
     @disctype = Disctype.find(params[:id])
   end
-  
+
   def update
     @disctype = Disctype.find(params[:id])
     if @disctype.update_attributes(params[:disctype])
@@ -34,7 +36,7 @@ class DisctypesController < ApplicationController
       render :action => 'edit'
     end
   end
-  
+
   def destroy
     @disctype = Disctype.find(params[:id])
     @disctype.destroy

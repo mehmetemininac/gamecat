@@ -20,6 +20,7 @@ Rails::Initializer.run do |config|
   config.gem "sqlite3-ruby", :lib => "sqlite3"
   # config.gem "aws-s3", :lib => "aws/s3"
 
+  config.gem 'ruby-debug'
   config.gem 'formtastic'
   config.gem 'devise', :version => '1.0.8'
   config.gem 'cancan'

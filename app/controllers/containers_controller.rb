@@ -1,16 +1,18 @@
 class ContainersController < ApplicationController
+  authorize_resource
+
   def index
     @containers = Container.all
   end
-  
+
   def show
     @container = Container.find(params[:id])
   end
-  
+
   def new
     @container = Container.new
   end
-  
+
   def create
     @container = Container.new(params[:container])
     if @container.save
@@ -20,11 +22,11 @@ class ContainersController < ApplicationController
       render :action => 'new'
     end
   end
-  
+
   def edit
     @container = Container.find(params[:id])
   end
-  
+
   def update
     @container = Container.find(params[:id])
     if @container.update_attributes(params[:container])
@@ -34,7 +36,7 @@ class ContainersController < ApplicationController
       render :action => 'edit'
     end
   end
-  
+
   def destroy
     @container = Container.find(params[:id])
     @container.destroy

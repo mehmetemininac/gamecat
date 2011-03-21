@@ -1,4 +1,8 @@
 class DiscsController < ApplicationController
+  authorize_resource
+  skip_authorize_resource :only => [:seearch]
+
+
   def index
 
     @discs = Disc.paginate :page => params[:page], :per_page => 20

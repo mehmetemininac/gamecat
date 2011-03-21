@@ -1,16 +1,18 @@
 class ContentsController < ApplicationController
+  authorize_resource
+
   def index
     @contents = Content.all
   end
-  
+
   def show
     @content = Content.find(params[:id])
   end
-  
+
   def new
     @content = Content.new
   end
-  
+
   def create
     @content = Content.new(params[:content])
     if @content.save
@@ -20,15 +22,15 @@ class ContentsController < ApplicationController
       render :action => 'new'
     end
   end
-  
+
   def edit_discs
     @content = Content.find_by_id params[:id]
   end
-  
+
   def edit
     @content = Content.find(params[:id])
   end
-  
+
   def update
     @content = Content.find(params[:id])
     if @content.update_attributes(params[:content])
@@ -38,7 +40,7 @@ class ContentsController < ApplicationController
       render :action => 'edit'
     end
   end
-  
+
   def destroy
     @content = Content.find(params[:id])
     @content.destroy

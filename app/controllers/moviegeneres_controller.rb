@@ -1,16 +1,18 @@
 class MoviegeneresController < ApplicationController
+  authorize_resource
+
   def index
     @moviegeneres = Moviegenere.all
   end
-  
+
   def show
     @moviegenere = Moviegenere.find(params[:id])
   end
-  
+
   def new
     @moviegenere = Moviegenere.new
   end
-  
+
   def create
     @moviegenere = Moviegenere.new(params[:moviegenere])
     if @moviegenere.save
@@ -20,11 +22,11 @@ class MoviegeneresController < ApplicationController
       render :action => 'new'
     end
   end
-  
+
   def edit
     @moviegenere = Moviegenere.find(params[:id])
   end
-  
+
   def update
     @moviegenere = Moviegenere.find(params[:id])
     if @moviegenere.update_attributes(params[:moviegenere])
@@ -34,7 +36,7 @@ class MoviegeneresController < ApplicationController
       render :action => 'edit'
     end
   end
-  
+
   def destroy
     @moviegenere = Moviegenere.find(params[:id])
     @moviegenere.destroy
