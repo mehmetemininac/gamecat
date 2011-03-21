@@ -1,4 +1,5 @@
 class DiscsController < ApplicationController
+  before_filter :authenticate_user!
   authorize_resource
   skip_authorize_resource :only => [:seearch]
 

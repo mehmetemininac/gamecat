@@ -1,16 +1,22 @@
 <ul>
-  <li><%= link_to "Containers", containers_path %></li>
-  <li><%= link_to "Discs(#{Disc.count})", discs_path %></li>
-  <li><%= link_to "Content(#{Content.count})", contents_path %></li>
-  <hr/>
-  <li><%= link_to "Disc Types", disctypes_path %></li>
-  <li><%= link_to "Content Types", contenttypes_path %></li>
-  <li><%= link_to "Content Categories", contentcategories_path %></li>
-  <li><%= link_to "Game Generes", gamegeneres_path %></li>
-  <li><%= link_to "Movie Generes", moviegeneres_path %></li>
-  <hr />
-  <li><%= link_to "Users", users_path %></li>
-  <li><%= link_to "Roles", roles_path %></li>
-  <hr />
-  <li><%= link_to "Search", search_discs_path %></li>
+  <% if user_signed_in? %>
+    <li><%= link_to "Containers", containers_path %></li>
+    <li><%= link_to "Discs(#{Disc.count})", discs_path %></li>
+    <li><%= link_to "Content(#{Content.count})", contents_path %></li>
+    <hr/>
+    <li><%= link_to "Disc Types", disctypes_path %></li>
+    <li><%= link_to "Content Types", contenttypes_path %></li>
+    <li><%= link_to "Content Categories", contentcategories_path %></li>
+    <li><%= link_to "Game Generes", gamegeneres_path %></li>
+    <li><%= link_to "Movie Generes", moviegeneres_path %></li>
+    <hr />
+    <li><%= link_to "Users", users_path %></li>
+    <li><%= link_to "Roles", roles_path %></li>
+    <hr />
+    <li><%= link_to "Search", search_discs_path %></li>
+    <hr />
+    <li><%= link_to "Exit", destroy_user_session_path %></li>
+  <% else %>
+    <li><%= link_to "Login", new_user_session_path %></li>
+  <% end %>
 </ul>

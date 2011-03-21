@@ -1,4 +1,5 @@
 class DisctypesController < ApplicationController
+  before_filter :authenticate_user!
   authorize_resource
 
   def index
