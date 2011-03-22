@@ -9,8 +9,8 @@
     <tr>
       <td><%=h moviegenere.name %></td>
       <td><%=h moviegenere.description %></td>
-      <%= common_links :list, moviegenere %>
+      <%= common_links :section => :list,:object =>  moviegenere %>
     </tr>
   <% end %>
 </table>
-<%= common_links :main %>
+<%= common_links :section => :main, :klass => Moviegenere %>

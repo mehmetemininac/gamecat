@@ -9,8 +9,8 @@
     <tr>
       <td><%=h container.name %></td>
       <td><%=h container.description.size > 100 ? container.description[0..95] + '[...]' : container.description %></td>
-      <%= common_links :list, container %>
+      <%= common_links :section => :list, :object => container %>
     </tr>
   <% end %>
 </table>
-<%= common_links :main %>
+<%= common_links :section => :main, :klass => Container %>
