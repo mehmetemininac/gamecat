@@ -9,8 +9,8 @@
     <tr>
       <td><%=h user.username %></td>
       <td><%=h "LOL"  %></td>
-      <%= common_links :list, user %>
+      <%= common_links :section => :list, :object => user %>
     </tr>
   <% end %>
 </table>
-<%= common_links :main %>
+<%= common_links :section => :main, :klass => User %>
