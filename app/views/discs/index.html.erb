@@ -17,10 +17,10 @@
       <td><%=h disc.given %></td>
       <td><%=h disc.container.name %></td>
       <td><%=h disc.location %></td>
-      <%= common_links :list, disc %>
+      <%= common_links :section => :list, :object => disc %>
     </tr>
   <% end %>
 </table>
 <br />
 <%= will_paginate @discs %>
-<%= common_links :main %>
+<%= common_links :section => :main, :klass => Disc %>
