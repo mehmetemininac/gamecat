@@ -9,8 +9,8 @@
     <tr>
       <td><%=h contentcategory.name %></td>
       <td><%=h contentcategory.description %></td>
-      <%= common_links :list, contentcategory %>
+      <%= common_links :section => :list, :object => contentcategory %>
     </tr>
   <% end %>
 </table>
-<%= common_links :main %>
+<%= common_links :section => :main, :klass => Contentcategory %>
