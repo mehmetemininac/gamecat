@@ -9,8 +9,8 @@
     <tr>
       <td><%=h contenttype.name %></td>
       <td><%=h contenttype.description %></td>
-      <%= common_links :list, contenttype %>
+      <%= common_links :section => :list, :object => contenttype %>
     </tr>
   <% end %>
 </table>
-<%= common_links :main %>
+<%= common_links :section => :main, :klass => Contenttype %>
