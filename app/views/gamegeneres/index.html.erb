@@ -9,8 +9,8 @@
     <tr>
       <td><%=h gamegenere.name %></td>
       <td><%=h gamegenere.description %></td>
-      <%= common_links :list, gamegenere %>
+      <%= common_links :section => :list, :object => gamegenere %>
     </tr>
   <% end %>
 </table>
-<%= common_links :main %>
+<%= common_links :section => :main, :klass => Gamegenere %>
