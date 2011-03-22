@@ -11,8 +11,8 @@
       <td><%=h content.name %></td>
       <td><%=h content.contenttype.name %></td>
       <td><%=h content.disc_ids.empty? ? 'None' : content.discs.collect{|d| d.number}.join(', ') %></td>
-      <%= common_links :list, content %>
+      <%= common_links :section => :list, :object => content %>
     </tr>
   <% end %>
 </table>
-<%= common_links :main %>
+<%= common_links :section => :main, :klass => Content %>
