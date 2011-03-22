@@ -9,8 +9,8 @@
     <tr>
       <td><%=h disctype.name %></td>
       <td><%=h disctype.description %></td>
-      <%= common_links :list, disctype %>
+      <%= common_links :section => :list, :object => disctype %>
     </tr>
   <% end %>
 </table>
-<%= common_links :main %>
+<%= common_links :section => :main, :klass => Disctype %>
