@@ -7,10 +7,10 @@
   <% for role in @roles %>
     <tr>
       <td><%=h role.name %></td>
-      <%= common_links :list, role %>
+      <%= common_links :section => :list, :object => role %>
     </tr>
   <% end %>
 </table>
 
-<%= common_links :main %>
+<%= common_links :section => :main, :klass => Role %>
 
